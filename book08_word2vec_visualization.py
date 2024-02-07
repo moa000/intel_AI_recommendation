@@ -10,7 +10,7 @@ font_name = font_manager.FontProperties(fname=font_path).get_name()
 mpl.rcParams['axes.unicode_minus'] = False
 rc('font',family=font_name)
 
-embedding_model = Word2Vec.load('./models/word2vec_movie_review.model')
+embedding_model = Word2Vec.load('./models/word2vec_book_review.models')
 key_word = '스파이더맨'
 sim_word = embedding_model.wv.most_similar(key_word, topn=100) #거리가 가장 가까운 단어(유사단어) 100개
 print(sim_word)
